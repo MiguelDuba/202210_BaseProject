@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Vivero El Otoño</a>
+      </nav>
+    </div>
+    <img
+      src="https://www.idipron.gov.co/sites/default/files/nota_Vivero-Ceresa_banner-nota.jpg"
+      class="img-fluid"
+      alt="Responsive image"
+    />
+    <div class="col-8">
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre comun</th>
+          <th scope="col">Type</th>
+          <th scope="col">Clima</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let plant of plants; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ plant.nombre_comun }}</td>
+          <td>{{ plant.tipo }}</td>
+          <td>{{ plant.clima }}</td>
+        </tr>
+        </tbody>
+      </table>
+      <p>Total plantas de interior : {{ getInteriorSize() }}</p>
+      <p>Total plantas de exterior : {{ getExteriorSize() }}</p>
+    </div>
+    <footer class="bg-light text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        Contact us: +573102105253 - info@viveroelotonio.com - @viveroelotonio
+      </div>
+    </footer>
+  </div>
+</div>
